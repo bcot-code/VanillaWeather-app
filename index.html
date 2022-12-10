@@ -11,7 +11,71 @@
 
 <body>
     <div class="container-1">
-        <a href="" class="btn btn-primary"></a>
+        <h1>Weather Currently</h1>
+        <div class="Weather-1">
+            <form>
+                <div class="row">
+                    <div class="col-9">
+                        <input type="search" placeholder="City Search" class="fm-ctrl sch-fm" />
+                    </div>
+                    <div class="col-3 padd-0">
+                        <input type="submit" class="btn btn-primary w-100" value="Search" />
+                    </div>
+                </div>
+            </form>
+            <div id="weather-data">
+                <div class="row">
+                    <div class="col-6"></div>
+                    <div class="col-lg-6 col-md-6 col-sm-8">
+                        <div class="temperature-container d-flex justify-content-end"><canvas width="52"
+                                height="52"></canvas>
+                            <div><span class="temperature">10</span><span class="unit-1">°f</span>
+                                <p>|</p><span class="unit">°C</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="weather-10_days" class="row">
+                <div class="col">
+                    <div class="WeatherForecastPreview">
+                        <div class="forecast-time">Sat</div><canvas width="38" height="38"></canvas>
+                        <div class="forecast-temperature"><span class="forecast-temperature-max">13°</span><span
+                                class="forecast-temperature-min">10°</span></div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="WeatherForecastPreview">
+                        <div class="forecast-time">Sun</div><canvas width="38" height="38"></canvas>
+                        <div class="forecast-temperature"><span class="forecast-temperature-max">11°</span><span
+                                class="forecast-temperature-min">8°</span></div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="WeatherForecastPreview">
+                        <div class="forecast-time">Mon</div><canvas width="38" height="38"></canvas>
+                        <div class="forecast-temperature"><span class="forecast-temperature-max">10°</span><span
+                                class="forecast-temperature-min">6°</span></div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="WeatherForecastPreview">
+                        <div class="forecast-time">Tue</div><canvas width="38" height="38"></canvas>
+                        <div class="forecast-temperature"><span class="forecast-temperature-max">10°</span><span
+                                class="forecast-temperature-min">7°</span></div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="WeatherForecastPreview">
+                        <div class="forecast-time">Wed</div><canvas width="38" height="38"></canvas>
+                        <div class="forecast-temperature"><span class="forecast-temperature-max">12°</span><span
+                                class="forecast-temperature-min">9°</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <small><a href="https://github.com/bcot-code/VanillaWeather-app" target="_blank">Open source</a> by <em>Barbie
+                C.</em></small>
     </div>
     <script src="src/script.js"></script>
 </body>
