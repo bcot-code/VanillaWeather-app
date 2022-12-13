@@ -1,11 +1,79 @@
 .container-1 {
   margin-left: auto;
   margin-right: auto;
-  padding-left: calc(var(--bs-gutter-x) * 0.5);
-  padding-right: calc(var(--bs-gutter-x) * 0.5);
+  padding-left: 16px;
+  padding-right: 12px;
   width: 100%;
+  box-sizing: border-box;
+  box-shadow: 2px 2px 2px 1px rgba(219, 25, 25, 0.2);
 }
+
 h1 {
-  color: brown;
+  color: rgb(152, 63, 63);
   font-family: "Times New Roman", Times, serif;
+}
+
+.Weather-1 {
+  border-radius: 16px;
+  padding: 40px;
+  max-width: 900px;
+  display: block;
+  box-sizing: border-box;
+  background-attachment: scroll;
+  background: url(/images/Clouds_background_video.mp4) 0 0 no-repeat;
+  background-size: cover;
+  animation: anim-ss steps(23) 1s infinite;
+  @keyframes anim-ss {
+    0% {
+      background-position: 0%;
+    }
+    100% {
+      background-position: 100%;
+    }
+  }
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+}
+.Weather-1 form {
+  border-bottom: 1px solid f9f7fe;
+  margin-top: 40px;
+  padding-bottom: 30px;
+}
+
+.location-search {
+  box-sizing: border-box;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: start;
+  color: rgb(34, 95, 156);
+}
+.btn {
+  background: blue;
+  text-align: center;
+  color: #fff;
+  border-color: black;
+  border-radius: 6px;
+  transition: 200ms ease-in-out;
+  box-shadow: none;
+  cursor: pointer;
+}
+.col-auto {
+  flex: 0 0 auto;
+  width: auto;
+}
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: calc(var(--bs-gutter-x) * -0.5);
+  margin-right: calc(var(--bs-gutter-x) * -0.5);
+  margin-top: calc(var(--bs-gutter-y) * -1);
+}
+.align-items-center {
+  align-items: center;
+  width: 800px;
+}
+#location {
+  font-size: 3rem;
+  font-weight: 800;
+  font-style: italic;
 }
