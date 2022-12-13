@@ -1,3 +1,8 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .container-1 {
   margin-left: auto;
   margin-right: auto;
@@ -20,7 +25,8 @@ h1 {
   display: block;
   box-sizing: border-box;
   background-attachment: scroll;
-  background: url(/images/Clouds_background_video.mp4) 0 0 no-repeat;
+  background: url("https://bestanimations.com/media/nature/229614541flowing-stream-river-bends-forest-gif.gif#.Y5jHq0os9FI.link")
+    0 0 no-repeat;
   background-size: cover;
   animation: anim-ss steps(23) 1s infinite;
   @keyframes anim-ss {
@@ -37,6 +43,8 @@ h1 {
   border-bottom: 1px solid f9f7fe;
   margin-top: 40px;
   padding-bottom: 30px;
+  display: flex;
+  justify-content: center;
 }
 
 .location-search {
@@ -45,14 +53,15 @@ h1 {
   font-weight: 400;
   line-height: 24px;
   text-align: start;
-  color: rgb(34, 95, 156);
+  color: rgb(16, 106, 195);
 }
 .btn {
+  width: 2.5em;
+  height: 2.5em;
   background: blue;
   text-align: center;
   color: #fff;
-  border-color: black;
-  border-radius: 6px;
+  border-radius: 50%;
   transition: 200ms ease-in-out;
   box-shadow: none;
   cursor: pointer;
@@ -76,4 +85,21 @@ h1 {
   font-size: 3rem;
   font-weight: 800;
   font-style: italic;
+}
+#city_name {
+  position: relative;
+  margin-left: 30px;
+  font-size: 35px;
+}
+#city_name span {
+  position: absolute;
+  right: 40px;
+  left: 70px;
+  color: bisque;
+}
+.forecast-time {
+  color: blanchedalmond;
+}
+.forecast-temperature {
+  color: whitesmoke;
 }
