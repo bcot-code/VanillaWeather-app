@@ -1,127 +1,185 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+      crossorigin="anonymous"
+    />
     <!--Font Awesome-->
-    <script src="https://kit.fontawesome.com/ff56f6300e.js" crossorigin="anonymous"></script>
+    <script
+      src="https://kit.fontawesome.com/ff56f6300e.js"
+      crossorigin="anonymous"
+    ></script>
     <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,700;1,600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="src/style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,700;1,600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="src/style.css" />
     <title>Vanilla Weather app</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <div class="container-1">
-        <h1>Weather Currently</h1>
-        <img src="" alt="" class="weather-icon">
-        <div class="Weather-1 location-search-btn">
-            <section>
-                <div class="container-2">
-                    <p></p>
-                </div>
-            </section>
-            <form class="align-items-center">
-                <div class="row">
-                    <div class="col-auto">
-                        <input type="search" placeholder="City Search" class="fm-ctrl sch-fm" />
-                    </div>
-                    <div class="col-auto">
-                        <button type="submit" class="btn btn-primary w-100 location-search-btn" id="search-bar"
-                            name="search">
-                            <i class="fas fa-search"></i>
-                        </button>
-                    </div>
-                    <div class="col-auto">
-                        <button type="submit" class="btn btn-primary w-100 location-search-btn" id="location-dot1"
-                            name="search">
-                            <i class="fas fa-location-pin"></i>
-                        </button>
-                    </div>
-                </div>
-            </form>
-            <div id="weather-data">
-                <div class="row">
-                    <div class="col-6">
-                        <div class="temperature-container d-flex justify-content-end"><canvas width="52"
-                                height="52"></canvas>
-                            <div>
-                                <ul>
-                                    <li id="city_name" class="city_nm name"
-                                        style="list-style: none; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">
-                                        <span style="font-size: 40px;">San
-                                            Francisco</span>
-                                    </li>
-                                    <li id="date_time" class="date-time" style="list-style: none;">
-                                        <span>time</span>
-                                    </li>
-                                    <br><br><br>
-                                    <li style="list-style: none;">
-                                        <span id="temperature" class="temp"></span>
-                                        <span class="units1">
-                                            <h2>50</h2><a href="#" id="C-link" class="active">°F</a>
-                                            |
-                                            <h2>23</h2><a href="#" id="F-link" class="active">°C</a>
-                                        </span>
-                                    </li>
-                                </ul>
-                                <img src="" alt="" class="icon" />
-                                <div class="description" style="color: antiquewhite; font-size: 20px;">Clear</div>
-                                <br />
-                                <br />
-                            </div>
-                        </div>
-                    </div>
-                </div>
+      <h1>Weather Currently</h1>
+      <img src="" alt="" class="weather-icon" />
+      <div class="Weather-1 location-search-btn">
+        <section>
+          <div class="container-2">
+            <p></p>
+          </div>
+        </section>
+        <form class="align-items-center">
+          <div class="row">
+            <div class="col-auto">
+              <input
+                type="search"
+                placeholder="City Search"
+                class="fm-ctrl sch-fm"
+              />
             </div>
-            <div id="weather-10_days" class="row">
-                <div class="col">
-                    <div class="WeatherForecastPreview">
-                        <div class="forecast-time">Sat</div><canvas width="38" height="38"></canvas>
-                        <div class="forecast-temperature"><span class="forecast-temperature-max">13°</span>
-                            | <span class="forecast-temperature-min">10°</span></div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="WeatherForecastPreview">
-                        <div class="forecast-time">Sun</div><canvas width="38" height="38"></canvas>
-                        <div class="forecast-temperature"><span class="forecast-temperature-max">11°</span> | <span
-                                class="forecast-temperature-min">8°</span></div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="WeatherForecastPreview">
-                        <div class="forecast-time">Mon</div><canvas width="38" height="38"></canvas>
-                        <div class="forecast-temperature"><span class="forecast-temperature-max">10°</span> | <span
-                                class="forecast-temperature-min">6°</span></div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="WeatherForecastPreview">
-                        <div class="forecast-time">Tue</div><canvas width="38" height="38"></canvas>
-                        <div class="forecast-temperature"><span class="forecast-temperature-max">10°</span> | <span
-                                class="forecast-temperature-min">7°</span></div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="WeatherForecastPreview">
-                        <div class="forecast-time">Wed</div><canvas width="38" height="38"></canvas>
-                        <div class="forecast-temperature"><span class="forecast-temperature-max">12°</span> | <span
-                                class="forecast-temperature-min">9°</span></div>
-                    </div>
-                </div>
+            <div class="col-auto">
+              <button
+                type="submit"
+                class="btn btn-primary w-100 location-search-btn"
+                id="search-bar"
+                name="search"
+              >
+                <i class="fas fa-search"></i>
+              </button>
             </div>
+            <div class="col-auto">
+              <button
+                type="submit"
+                class="btn btn-primary w-100 location-search-btn"
+                id="location-dot1"
+                name="search"
+              >
+                <i class="fas fa-location-pin"></i>
+              </button>
+            </div>
+          </div>
+        </form>
+        <div id="weather-data">
+          <div class="row">
+            <div class="col-6">
+              <div class="temperature-container d-flex justify-content-end">
+                <canvas width="52" height="52"></canvas>
+                <div>
+                  <ul>
+                    <li
+                      id="city_name"
+                      class="city_nm name"
+                      style="
+                        list-style: none;
+                        font-family: Cambria, Cochin, Georgia, Times,
+                          'Times New Roman', serif;
+                      "
+                    >
+                      <span style="font-size: 40px">San Francisco</span>
+                    </li>
+                    <li
+                      id="date_time"
+                      class="date-time"
+                      style="list-style: none"
+                    >
+                      <span>time</span>
+                    </li>
+                    <br /><br /><br />
+                    <li style="list-style: none">
+                      <span id="temperature" class="temp"></span>
+                      <span class="units1">
+                        <h2 style="color: rgb(0, 0, 0)">50</h2>
+                        <a href="#" id="C-link" class="active">°F</a>
+                        |
+                        <h2 style="color: rgb(0, 0, 0)">23</h2>
+                        <a href="#" id="F-link" class="active">°C</a>
+                      </span>
+                    </li>
+                  </ul>
+                  <img src="" alt="" class="icon" />
+                  <div
+                    class="description"
+                    style="color: antiquewhite; font-size: 20px"
+                  >
+                    Clear
+                  </div>
+                  <br />
+                  <br />
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-        <large><i class="fa fa-fab fa-github">
-                <a href="https://github.com/bcot-code/VanillaWeather-app" target="_blank"></a></i> by <em>Barbie
-                C.</em></large>
+        <div id="weather-10_days" class="row">
+          <div class="col">
+            <div class="WeatherForecastPreview">
+              <div class="forecast-time">Sat</div>
+              <canvas width="38" height="38"></canvas>
+              <div class="forecast-temperature">
+                <span class="forecast-temperature-max">13°</span> |
+                <span class="forecast-temperature-min">10°</span>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="WeatherForecastPreview">
+              <div class="forecast-time">Sun</div>
+              <canvas width="38" height="38"></canvas>
+              <div class="forecast-temperature">
+                <span class="forecast-temperature-max">11°</span> |
+                <span class="forecast-temperature-min">8°</span>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="WeatherForecastPreview">
+              <div class="forecast-time">Mon</div>
+              <canvas width="38" height="38"></canvas>
+              <div class="forecast-temperature">
+                <span class="forecast-temperature-max">10°</span> |
+                <span class="forecast-temperature-min">6°</span>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="WeatherForecastPreview">
+              <div class="forecast-time">Tue</div>
+              <canvas width="38" height="38"></canvas>
+              <div class="forecast-temperature">
+                <span class="forecast-temperature-max">10°</span> |
+                <span class="forecast-temperature-min">7°</span>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="WeatherForecastPreview">
+              <div class="forecast-time">Wed</div>
+              <canvas width="38" height="38"></canvas>
+              <div class="forecast-temperature">
+                <span class="forecast-temperature-max">12°</span> |
+                <span class="forecast-temperature-min">9°</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <large
+        ><i class="fa fa-fab fa-github">
+          <a
+            href="https://github.com/bcot-code/VanillaWeather-app"
+            target="_blank"
+          ></a
+        ></i>
+        by <em>Barbie C.</em></large
+      >
     </div>
     <script src="src/script.js"></script>
-</body>
-
+  </body>
 </html>
