@@ -66,6 +66,16 @@ h1 {
   box-shadow: none;
   cursor: pointer;
 }
+input.fm-ctrl {
+  border: none;
+  outline: none;
+  padding: 0.4em 1em;
+  border-radius: 20px;
+  background: #c7c7c768;
+  color: white;
+  font-size: 105%;
+  width: calc(105% -70px);
+}
 .col-auto {
   flex: 0 0 auto;
   width: auto;
@@ -102,4 +112,7 @@ h1 {
 }
 .forecast-temperature {
   color: whitesmoke;
+}
+#date_time {
+  color: rgb(16, 106, 195);
 }

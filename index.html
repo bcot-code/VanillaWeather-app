@@ -13,6 +13,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,700;1,600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="src/style.css">
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <title>Vanilla Weather app</title>
 </head>
 
@@ -52,21 +53,21 @@
                                 height="52"></canvas>
                             <div>
                                 <ul>
-                                    <li id="city_name" class="city_nm name"
+                                    <li id="city_name" class="city_nm city"
                                         style="list-style: none; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">
                                         <span style="font-size: 40px;">San
                                             Francisco</span>
                                     </li>
                                     <li id="date_time" class="date-time" style="list-style: none;">
-                                        <span>time</span>
+                                        <span>Friday 11:30</span>
                                     </li>
                                     <br><br><br>
                                     <li style="list-style: none;">
-                                        <span id="temperature" class="temp"></span>
-                                        <span class="units1">
-                                            <h2>50</h2><a href="#" id="C-link" class="active">°F</a>
+                                        <span class="temp">
+                                            <h2 class="temperaure1" id="temperature">50</h2>
+                                            <a href="#" id="Feh" class="active">°F</a>
                                             |
-                                            <h2>23</h2><a href="#" id="F-link" class="active">°C</a>
+                                            <a href="#" id="Cel" class="active">°C</a>
                                         </span>
                                     </li>
                                 </ul>
