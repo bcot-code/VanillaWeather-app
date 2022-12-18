@@ -2,6 +2,8 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  background-image: url("https://source.unsplash.com/1600x900/?landscape");
+  background: #222;
 }
 .container-1 {
   margin-left: auto;
@@ -24,19 +26,8 @@ h1 {
   max-width: 900px;
   display: block;
   box-sizing: border-box;
+  background: #000000d0;
   background-attachment: scroll;
-  background: url("https://bestanimations.com/media/nature/229614541flowing-stream-river-bends-forest-gif.gif#.Y5jHq0os9FI.link")
-    0 0 no-repeat;
-  background-size: cover;
-  animation: anim-ss steps(23) 1s infinite;
-  @keyframes anim-ss {
-    0% {
-      background-position: 0%;
-    }
-    100% {
-      background-position: 100%;
-    }
-  }
   box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
 }
 .Weather-1 form {
@@ -66,15 +57,26 @@ h1 {
   box-shadow: none;
   cursor: pointer;
 }
-input.fm-ctrl {
+.btn:hover {
+  background: #d50808bc;
+}
+.search {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: start;
+}
+
+input.search-bar {
   border: none;
   outline: none;
   padding: 0.4em 1em;
-  border-radius: 20px;
-  background: #c7c7c768;
+  border-radius: 24px;
+  background: #7c7c7ca2;
   color: white;
+  font-family: inherit;
   font-size: 105%;
-  width: calc(105% -70px);
+  width: calc(100% - 100px);
 }
 .col-auto {
   flex: 0 0 auto;
@@ -91,28 +93,54 @@ input.fm-ctrl {
   align-items: center;
   width: 800px;
 }
-#location {
-  font-size: 3rem;
-  font-weight: 800;
-  font-style: italic;
-}
+
 #city_name {
   position: relative;
-  margin-left: 30px;
+  margin-left: 60px;
   font-size: 35px;
+  color: antiquewhite;
 }
 #city_name span {
   position: absolute;
   right: 40px;
   left: 70px;
-  color: bisque;
 }
 .forecast-time {
-  color: blanchedalmond;
+  color: rgba(16, 151, 39, 0.742);
+}
+.monday {
+  color: rgb(62, 181, 62);
 }
 .forecast-temperature {
-  color: whitesmoke;
+  color: white;
 }
-#date_time {
+#date {
   color: rgb(16, 106, 195);
+}
+.description {
+  text-transform: capitalize;
+  margin-left: 10px;
+  color: aliceblue;
+}
+.wind {
+  margin: 20px;
+  color: aliceblue;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+}
+.weather.loading {
+  visibility: hidden;
+  max-height: 20px;
+  position: relative;
+}
+.weather.loading:after {
+  visibility: visible;
+  content: "Loading...";
+  color: white;
+  position: absolute;
+  top: 0;
+  left: 20px;
 }
