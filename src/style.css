@@ -138,6 +138,9 @@ input.search-bar {
   font-size: 40px;
   color: whitesmoke;
 }
+.weather-tempertaure .active {
+  color: rgb(50, 3, 38);
+}
 
 .flex {
   display: flex;
