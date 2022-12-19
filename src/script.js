@@ -1,27 +1,23 @@
 // Location
-function showPosition(position) {
+function searchLocation(position) {
   let apiKey = "c119ffef35b7245a5e03b6e5724ae961";
-  let lat = position.coords.latitude;
-  let lon = position.coords.longitude;
-  let apiUrl = `https://api.shecodes.io/weather/v1/current?lon=${lon}&lat=${lat}&key=${apiKey}`;
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&appid=${apiKey}&units=metric`;
   axios.get(apiUrl).then(displayWeatherCondition);
 }
-function getCurrentPosition(event) {
+function getCurrentLocation(event) {
   event.preventDefault();
-  navigator.geolocation.getCurrentPosition(showPosition);
+  navigator.geolocation.getCurrentPosition(searchLocation);
 }
+let currentLocationButton = document.querySelector("#location-dot1");
+currentLocationButton.addEventListener("click", getCurrentLocation);
+
 function displayWeatherCondition(response) {
   let temperatureElement = document.querySelector("#temperature");
   let descriptionElement = document.querySelector("#description");
   let cityElement = document.querySelector("#city");
-  let windElement = document.querySelector("#wind");
+  let windElement = document.querySelector(".wind");
   let dateElement = document.querySelector("#date");
   let iconElement = document.querySelector("#icon");
-
-  document.body.style.backgroundImage = url(
-    "https://source.unsplash.com/1600x900/?" + cityElement
-  );
-
   celsiusTemperature = response.data.main.temp;
   temperatureElement.innerHTML = Math.round(response.data.main.temp);
   cityElement.innerHTML = response.data.name;
@@ -30,10 +26,15 @@ function displayWeatherCondition(response) {
   dateElement.innerHTML = formatDate(response.data.dt * 1000);
   iconElement.setAttribute(
     "src",
-    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+    "http://openweathermap.org/img/wn/" +
+      response.data.weather[0].icon +
+      "@2x.png"
   );
   iconElement.setAttribute("alt", response.data.weather[0].description);
 
+  //  I can't change the background img once clicked on or get the date to display ...
+  "url('https://source.unsplash.com/1600x900/?" + cityElement + "')";
+  //
   search(response.data.coord);
 }
 
@@ -44,7 +45,6 @@ document
       weather.search();
     }
   });
-
 function search(city) {
   let apiKey = "c119ffef35b7245a5e03b6e5724ae961";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
@@ -60,6 +60,7 @@ let form = document.querySelector("#search-form");
 form.addEventListener("submit", handleSubmit);
 
 // Change of F to C
+
 function displayFahrenheitTemperature(event) {
   event.preventDefault();
   let temperatureElement = document.querySelector("#temperature");
@@ -80,8 +81,7 @@ celsiusLink.addEventListener("click", displayCelsiusTemperature);
 let celsiusTemperature = null;
 
 // Time
-function formatDate(timestamp) {
-  let date = new Date(timestamp);
+function formatDate(date) {
   let hours = date.getHours();
   if (hours < 10) {
     hours = `0${hours}`;
@@ -91,6 +91,7 @@ function formatDate(timestamp) {
     minutes = `0${minutes}`;
   }
 
+  let dayIndex = date.getDay();
   let days = [
     "Sunday",
     "Monday",
@@ -100,14 +101,10 @@ function formatDate(timestamp) {
     "Friday",
     "Saturday",
   ];
-  let day = days[date.getDay()];
+  let day = days[dayIndex];
+
   return `${day} ${hours}:${minutes}`;
 }
-
-function formatDay(timestamp) {
-  let date = new Date(timestamp * 1000);
-  let day = date.getDay();
-  let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
-
-  return days[day];
-}
+let dateElement = document.querySelector("#date");
+let currentTime = new Date();
+dateElement.innerHTML = formatDate(currentTime);
