@@ -13,9 +13,13 @@
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,700;1,600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="src/style.css">
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
   <link rel="preconnect" href="https://fonts.gstatic.com" />
   <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,700;1,600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="src/style.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.24.0/axios.min.js"
+    integrity="sha512-u9akINsQsAkG9xjc1cnGF4zw5TFDwkxuc9vUp5dltDWYCSmyd0meygbvgXrlc/z7/o4a19Fb5V0OUE58J7dcyw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <title>Vanilla Weather app</title>
 </head>
 
@@ -23,7 +27,7 @@
   <div class="container-1">
 
     <h1>Weather Currently</h1>
-    <img src="" alt="" class="weather-icon" />
+    <img src="#" alt="" class="weather-icon" />
     <div class="Weather-1 location-search-btn">
       <section>
         <div class="container-2">
@@ -61,18 +65,16 @@
                       ">
                     <span id="city" style="font-size: 40px">San Francisco</span>
                   </li>
-                  <li id="date_time" class="date-time" style="list-style: none">
-                    <span>time</span>
-                  </li>
+                  <li id="date_time date" style="list-style: none"></li>
                   <br /><br /><br />
                   <li style="list-style: none">
-                    <span id="temperature" class="temp"></span>
-                    <span class="units1">
-                      <h2 style="color: rgb(0, 0, 0)">50</h2>
-                      <a href="#" id="Feh" class="active">°F</a>
-                      |
-                      <h2 style="color: rgb(0, 0, 0)">23</h2>
+                    <span id="temperature"></span>
+                    <span class="units">
                       <a href="#" id="Cel" class="active">°C</a>
+                      <p style="color:blue;">
+                        |
+                      </p>
+                      <a href="#" id="Feh" class="active">°F</a>
                     </span>
                   </li>
                 </ul>
@@ -81,6 +83,7 @@
                   Clear
                 </div>
                 <br />
+                <div class="wind">Wind speed: 6.2 km/h</div>
                 <br />
               </div>
             </div>
@@ -146,6 +149,5 @@
   </div>
   <script src="src/script.js"></script>
 </body>
-
 
 </html>
