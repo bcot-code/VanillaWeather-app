@@ -19,14 +19,13 @@ function showTemperature(response) {
   const { name } = response.data;
   const { icon, description } = response.data.weather[0];
   const { temp } = response.data.main;
-  const { speed } = data.wind;
   console.log(name, icon, description, temp);
   document.querySelector("#city").innerHTML = name;
   document.querySelector("#icon").src =
     "https://openweathermap.org/img/wn/" + icon + "@2x.png";
   document.querySelector("#description").innerHTML = description;
   document.querySelector("#temperature").innerHTML = temp;
-  document.querySelector(".wind").innerText = "Wind speed: " + speed + " km/h";
+  document.querySelector(".wind").innerHTML = response.data.wind.speed;
   document.body.style.backgroundImage =
     "url('https://source.unsplash.com/1600x900/?" + name + "')";
 }

@@ -8,11 +8,11 @@ body {
 .container-1 {
   margin-left: auto;
   margin-right: auto;
-  padding-left: 16px;
-  padding-right: 12px;
+  padding: 20px;
   width: 100%;
   box-sizing: border-box;
   box-shadow: 2px 2px 2px 1px rgba(219, 25, 25, 0.2);
+  text-align: left;
 }
 
 h1 {
@@ -21,7 +21,7 @@ h1 {
 }
 
 .Weather-1 {
-  border-radius: 16px;
+  border-radius: 20px;
   padding: 40px;
   max-width: 900px;
   display: block;
@@ -115,9 +115,12 @@ input.search-bar {
 .forecast-temperature {
   color: white;
 }
-#date {
-  color: rgb(16, 106, 195);
+#date_time {
+  font-size: 90px;
+  font-weight: 100;
+  line-height: 28px;
 }
+
 .description {
   text-transform: capitalize;
   margin-left: 10px;
