@@ -4,7 +4,7 @@ function weather(response) {
   let temperature = Math.round(response.data.main.temp);
 
   let location = document.querySelector("#city");
-  location.innerHTML = `${temperature}.`;
+  location.addEventListener("click");
 }
 function showPosition(position) {
   let apiKey = "b9ba0314a93083136d968577c718e31d";
@@ -28,6 +28,9 @@ function showTemperature(response) {
   document.querySelector(".wind").innerHTML = response.data.wind.speed;
   document.body.style.backgroundImage =
     "url('https://source.unsplash.com/1600x900/?" + name + "')";
+  iconElement.setAttribute("alt", response.data.weather[0].description);
+
+  celsiusTemperature = response.data.main.temp;
 }
 
 document
@@ -53,27 +56,16 @@ let form = document.querySelector("#search-form");
 form.addEventListener("submit", handleSubmit);
 
 // Change of F to C
-function convertTf(event) {
+function showFahrenheitTemperature(event) {
   event.preventDefault();
-  celLink.classList.remove("active");
-  fehLink.classList.add("active");
-  let temperaElment = document.querySelector("#temperature");
-  let tempF = (displayWeather * 9) / 5 + 32;
-  temperaElment.innerHTML = Math.round(tempF);
-}
-function convertTc(event) {
-  event.preventDefault();
-  fehLink.classList.remove("active");
-  celLink.classList.add("active");
   let temperatureElement = document.querySelector("#temperature");
-  temperatureElement.innerHTML = Math.round(displayWeather);
+  let fahrenheiTemp = (celsiusTemperature * 9) / 5 + 32;
+  temperatureElement.innerHTML = Math.round(fahrenheiTemp);
 }
-
 let fahrenheitLink = document.querySelector("#Feh");
-fahrenheitLink.addEventListener("click", displayFahrenheitTemperature);
+fahrenheitLink.addEventListener("click", showFahrenheitTemperature);
 
-let celsiusLink = document.querySelector("#Cel");
-celsiusLink.addEventListener("click", displayCelsiusTemperature);
+let celsiusTemperature = null;
 
 // Time
 function formatDate(date) {

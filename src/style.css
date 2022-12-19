@@ -3,7 +3,6 @@ body {
   justify-content: center;
   align-items: center;
   background-image: url("https://source.unsplash.com/1600x900/?landscape");
-  background: #222;
 }
 .container-1 {
   margin-left: auto;
@@ -126,9 +125,18 @@ input.search-bar {
   margin-left: 10px;
   color: aliceblue;
 }
+.wind-speed {
+  font-size: 20px;
+  color: white;
+}
 .wind {
   margin: 20px;
   color: aliceblue;
+  font-size: 20px;
+}
+#temperature {
+  font-size: 40px;
+  color: whitesmoke;
 }
 
 .flex {
@@ -147,4 +155,7 @@ input.search-bar {
   position: absolute;
   top: 0;
   left: 20px;
+}
+a#Cel {
+  font-size: 20px;
 }
