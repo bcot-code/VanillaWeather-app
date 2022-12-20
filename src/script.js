@@ -24,6 +24,7 @@ function displayWeatherCondition(response) {
   windElement.innerHTML = Math.round(response.data.wind.speed);
   descriptionElement.innerHTML = response.data.weather[0].description;
   dateElement.innerHTML = formatDate(response.data.dt * 1000);
+
   iconElement.setAttribute(
     "src",
     "http://openweathermap.org/img/wn/" +
@@ -33,7 +34,8 @@ function displayWeatherCondition(response) {
   iconElement.setAttribute("alt", response.data.weather[0].description);
 
   //  I can't change the background img once clicked on search for a particular city or get the date to display ...
-  "url('https://source.unsplash.com/1600x900/?" + cityElement + "')";
+  document.body.style.backgroundImage =
+    "url('https://source.unsplash.com/1600x900/?" + cityElement + "')";
   //
   search(response.data.coord);
 }
@@ -105,6 +107,6 @@ function formatDate(date) {
 
   return `${day} ${hours}:${minutes}`;
 }
-let dateElement = document.querySelector("#date");
+let dateElement = document.getElementById("#date");
 let currentTime = new Date();
 dateElement.innerHTML = formatDate(currentTime);

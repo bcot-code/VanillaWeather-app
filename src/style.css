@@ -138,6 +138,18 @@ input.search-bar {
   font-size: 40px;
   color: whitesmoke;
 }
+#weather-10_days {
+  margin-top: 20px;
+  text-align: center;
+  color: rgb(18, 124, 18);
+}
+.weather-forecast-date {
+  font-size: 15px;
+  opacity: 0.5;
+}
+.forecast-temperature-min {
+  opacity: 0.6;
+}
 .weather-tempertaure .active {
   color: rgb(50, 3, 38);
 }
@@ -146,19 +158,7 @@ input.search-bar {
   display: flex;
   align-items: center;
 }
-.weather.loading {
-  visibility: hidden;
-  max-height: 20px;
-  position: relative;
-}
-.weather.loading:after {
-  visibility: visible;
-  content: "Loading...";
-  color: white;
-  position: absolute;
-  top: 0;
-  left: 20px;
-}
+
 a#Cel {
   font-size: 20px;
 }
