@@ -3,6 +3,7 @@ body {
   justify-content: center;
   align-items: center;
   background-image: url("https://source.unsplash.com/1600x900/?landscape");
+  background-repeat: no-repeat;
 }
 .container-1 {
   margin-left: auto;
@@ -31,21 +32,13 @@ h1 {
 }
 .Weather-1 form {
   border-bottom: 1px solid f9f7fe;
-  margin-top: 40px;
+  margin-top: 50px;
   padding-bottom: 30px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.location-search {
-  box-sizing: border-box;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 24px;
-  text-align: start;
-  color: rgb(16, 106, 195);
-}
 .btn {
   width: 2.5em;
   height: 2.5em;
@@ -82,17 +75,6 @@ input.search-bar {
   flex: 0 0 auto;
   width: auto;
 }
-.row {
-  display: flex;
-  flex-wrap: wrap;
-  margin-left: calc(var(--bs-gutter-x) * -0.5);
-  margin-right: calc(var(--bs-gutter-x) * -0.5);
-  margin-top: calc(var(--bs-gutter-y) * -1);
-}
-.align-items-center {
-  align-items: center;
-  width: 800px;
-}
 
 #city_name {
   position: relative;
@@ -105,19 +87,9 @@ input.search-bar {
   right: 40px;
   left: 70px;
 }
-.forecast-time {
-  color: rgba(16, 151, 39, 0.742);
-}
-.monday {
-  color: rgb(62, 181, 62);
-}
+
 .forecast-temperature {
   color: white;
-}
-#date_time {
-  font-size: 90px;
-  font-weight: 100;
-  line-height: 28px;
 }
 
 .description {
@@ -125,11 +97,8 @@ input.search-bar {
   margin-left: 10px;
   color: aliceblue;
 }
-.wind-speed {
-  font-size: 20px;
-  color: white;
-}
-.wind {
+
+#wind {
   margin: 20px;
   color: aliceblue;
   font-size: 20px;
@@ -138,7 +107,11 @@ input.search-bar {
   font-size: 40px;
   color: whitesmoke;
 }
-#weather-10_days {
+.weather-app-wrapper {
+  max-width: 700px;
+  margin: 60px auto;
+}
+.weather-10_days {
   margin-top: 20px;
   text-align: center;
   color: rgb(18, 124, 18);
@@ -149,9 +122,6 @@ input.search-bar {
 }
 .forecast-temperature-min {
   opacity: 0.6;
-}
-.weather-tempertaure .active {
-  color: rgb(50, 3, 38);
 }
 
 .flex {
