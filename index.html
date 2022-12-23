@@ -43,19 +43,19 @@
       </form>
       <div id="weather-data">
         <div class="row">
-          <div class="col-8">
+          <div class="col-3 ms-lg-4">
             <div class="temperature-container d-flex justify-content-end">
               <div class="col">
                 <ul class="weather-temperature">
                   <li id="city_name" class="city_nm name" style="
-                        list-style: none;
-                        font-family: Cambria, Cochin, Georgia, Times,
-                          'Times New Roman', serif;
-                      ">
-                    <span id="city" style="font-size: 40px">San Francisco</span>
+                          list-style: none;
+                          font-family: Cambria, Cochin, Georgia, Times,
+                            'Times New Roman', serif;
+                        float: inline-end;
+                        padding-inline-end: 10px;">
+                    <span id="city" style="font-size: 40px;">San Francisco</span>
                   </li>
-                  <li id="date_time" style="list-style: none; font-size: 16px; color:blueviolet;">Friday, 05:00
-                  </li>
+                  <li id="date_time" style="list-style: none; font-size: 16px; color:blueviolet;"></li>
                   <br />
                   <li class="d-flex" style="list-style: none">
                     <strong id="temperature"></strong>
@@ -65,26 +65,73 @@
                     </span>
                   </li>
                 </ul>
-              </div>
-              <div class="row">
-                <img src="https://openweathermap.org/img/wn/04n.png" alt="" id="icon" />
-                <div id="description" class="description" style="color: antiquewhite; font-size: 20px">
-                  Clear
+                <div class="local-overview col ms-lg-4 mt-4 dark-container">
+                  <img src="https://openweathermap.org/img/wn/04n.png" alt="" id="icon" />
+                  <div id="description" class="description" style="font-size: 20px;">
+                    Clear
+                  </div>
+                  <br />
+                  <br />
                 </div>
-                <br />
-                <span style="color:white;">Wind speed: </span>
-                <div id="wind">6.2</div>
-                <div id="string" style="color:crimson;">km/h</div>
+              </div>
+            </div>
+          </div>
+          <div class="row d-flex">
+            <div class="container flex-md-row flex-column">
+              <div class="row">
+                <div style="color:white;" class="col-3"><i class="fa-solid fa-wind"></i>Wind speed:
+                  <div id="wind">6.2</div>
+                  <div id="string" style="color:crimson;">km/h</div>
+                </div>
+                <section class="sun-time col-md mt-3 mt-md-2 dark-icon">
+                  <div class="card dark">
+                    <img src="/amcharts_weather_images/raychel-sanner-MnnXMvs4cQo-unsplash.jpg" class="card-img w-100%"
+                      id="scenery">
+                    <div class="card-img-overlay text-center">
+                      <i class="fa-solid fa-sun"></i>
+                      <h3 lass="fw-light">Sunrise</h3>
+                      <h2 id="sunrise-time">07:16 AM</h2>
+                      <br>
+                      <i class="fa-solid fa-moon"></i>
+                      <h3 lass="fw-lighter">Sunset</h3>
+                      <h2 id="sunset-time">05:45 PM</h2>
+                    </div>
+                  </div>
+                </section>
                 <br />
               </div>
             </div>
           </div>
         </div>
+        <section class="full-cast d-flex justify-content-md-around my-4">
+          <div class="weather-10_days" id="forecast">
+            <div class="daily m-2 m-md-0">
+              <p>Thu</p>
+              <img src="/assets/icons/overcast.svg" class="weather-icon forecast-icon mb-2" height="45px" width="50px">
+              <p>
+                <span class="temps">64</span>°<span class="fahrenheit">F </span><br>
+                <span class="daily-low">
+                  <span class="forecast-low temps">50</span>°<span class="fahrenheit">F
+                  </span>
+                </span>
+              </p>
+            </div>
+            <p>Tues</p>
+            <img src="/assets/icons/overcast.svg" class="weather-icon forecast-icon mb-2" height="45px" width="50px">
+            <p>
+              <span class="temps">64</span>°<span class="fahrenheit">F </span><br>
+              <span class="daily-low">
+                <span class="forecast-low temps">50</span>°<span class="fahrenheit">F
+                </span>
+              </span>
+            </p>
+          </div>
       </div>
-      <div class="weather-10_days" id="forecast">
-
-      </div>
+      </section>
     </div>
+  </div>
+  </div>
+  <div>
     <large><i class="fa fa-fab fa-github">
         <a href="https://github.com/bcot-code/VanillaWeather-app" target="_blank"></a></i>
       by <em>Barbie C.</em></large>

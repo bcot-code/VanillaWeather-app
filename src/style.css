@@ -4,6 +4,7 @@ body {
   align-items: center;
   background-image: url("https://source.unsplash.com/1600x900/?landscape");
   background-repeat: no-repeat;
+  background-size: cover;
 }
 .container-1 {
   margin-left: auto;
@@ -97,6 +98,28 @@ input.search-bar {
   margin-left: 10px;
   color: aliceblue;
 }
+.card {
+  min-height: 100px;
+  margin-top: 20px;
+}
+
+.card-img {
+  height: 300px;
+  object-fit: cover;
+  opacity: 0.5;
+}
+.card-img-overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  text-align: start;
+}
+.sun-time i {
+  font-size: 17px;
+  color: #00526beb;
+}
 
 #wind {
   margin: 20px;
@@ -110,6 +133,21 @@ input.search-bar {
 .weather-app-wrapper {
   max-width: 700px;
   margin: 60px auto;
+}
+.full-cast {
+  overflow-x: scroll;
+  overflow-y: visible;
+  padding: 10px 10px 15px 10px;
+  width: 100%;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.my-4 {
+  margin-top: 1.5rem !important;
+  margin-bottom: 1.5rem !important;
+}
+.d-flex {
+  display: flex !important;
 }
 .weather-10_days {
   margin-top: 20px;
