@@ -49,8 +49,8 @@ function sunTimes(response) {
   let sunrise = document.querySelector("#sunrise-time");
   let sunset = document.querySelector("#sunset-time");
 
-  sunset.innerHTML = response.data.sys.sunset;
-  sunrise.innerHTML = response.data.sys.sunrise;
+  sunset.innerHTML = formatDate(response.data.sys.sunset * 1000);
+  sunrise.innerHTML = formatDate(response.data.sys.sunrise * 1000);
 }
 
 //forecast 10 days
