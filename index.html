@@ -24,7 +24,7 @@
   <div class="container-1">
     <h1>Weather Currently</h1>
     <div class="Weather-1 location-search-btn">
-      <form class="align-items-center" id="search-form">
+      <form class="d-flex align-items-center flex-wrap" id="search-form">
         <div class="row">
           <div class="col-auto">
             <input id="search-input" type="search" placeholder="City Search" class="fm-ctrl sch-fm" />
@@ -83,8 +83,8 @@
                   <div id="wind">6.2</div>
                   <div id="string" style="color:crimson;">km/h</div>
                 </div>
-                <section class="sun-time col-6 col-sm-3 dark-icon">
-                  <div class="card dark">
+                <section class="sun-time col-6 col-sm-3 position-relative dark-icon">
+                  <div class="card dark ">
                     <img
                       src="https://images.unsplash.com/photo-1465488867967-ffb57e7f0a89?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8bW9ybmluZ3xlbnwwfHwwfHw%3D&w=1000&q=80"
                       class="card-img w-100%" id="scenery">
@@ -117,20 +117,10 @@
                 </span>
               </p>
             </div>
-            <p>Tues</p>
-            <img src="/assets/icons/overcast.svg" class="weather-icon forecast-icon mb-2" height="45px" width="50px">
-            <p>
-              <span class="temps">64</span>°<span class="fahrenheit">F </span><br>
-              <span class="daily-low">
-                <span class="forecast-low temps">50</span>°<span class="fahrenheit">F
-                </span>
-              </span>
-            </p>
           </div>
+        </section>
       </div>
-      </section>
     </div>
-  </div>
   </div>
   <div>
     <large><i class="fa fa-fab fa-github">
