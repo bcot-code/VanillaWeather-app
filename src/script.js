@@ -44,6 +44,15 @@ function getCurrentLocation(event) {
 let currentLocationButton = document.querySelector("#location-dot1");
 currentLocationButton.addEventListener("click", getCurrentLocation);
 
+//Sunrise and Sunset
+function sunTimes(response) {
+  let sunrise = document.querySelector("#sunrise-time");
+  let sunset = document.querySelector("#sunset-time");
+
+  sunset.innerHTML = response.data.sys.sunset;
+  sunrise.innerHTML = response.data.sys.sunrise;
+}
+
 //forecast 10 days
 function displayForecast(response) {
   let forecast = response.data.daily;
@@ -69,11 +78,11 @@ function displayForecast(response) {
           
           <div class="forecast-temperature">
             <span class="forecast-temperature-max">
-              ${Math.round(forecastDay.temp.max)} °
+              ${Math.round(forecastDay.temp.max)}°
             </span>
             |
             <span class="forecast-temperature-min">
-              ${Math.round(forecastDay.temp.min)} °
+              ${Math.round(forecastDay.temp.min)}°
             </span>
           </div>
         </div>
@@ -123,6 +132,8 @@ document
       weather.search();
     }
   });
+
+// Search bar
 function search(city) {
   let apiKey = "c119ffef35b7245a5e03b6e5724ae961";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
