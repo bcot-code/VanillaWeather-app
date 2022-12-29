@@ -122,6 +122,8 @@ function displayWeatherCondition(response) {
   document.querySelector("#icon").src =
     "https://openweathermap.org/img/wn/" + icon + ".png";
 
+  sunTimes(response);
+
   specificForecast(response.data.coord);
 }
 

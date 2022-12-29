@@ -108,7 +108,11 @@ input.search-bar {
   min-height: 100px;
   margin-top: 20px;
 }
-
+#side-bar {
+  border-right: 1px solid #369;
+  margin: 0;
+  padding: 5px;
+}
 .card-img {
   height: 300px;
   object-fit: cover;
