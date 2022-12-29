@@ -108,6 +108,14 @@ input.search-bar {
   min-height: 100px;
   margin-top: 20px;
 }
+.el {
+  background: rgba(36, 24, 42, 0.535);
+  aspect-ratio: var(--aspect-ratio);
+  color: white;
+  font: 150% system-ui;
+  position: relative;
+  margin: 0 0 1rem;
+}
 #side-bar {
   border-right: 1px solid #369;
   margin: 0;

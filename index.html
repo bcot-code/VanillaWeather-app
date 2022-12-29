@@ -83,7 +83,7 @@
                   <div id="wind">6.2</div>
                   <div id="string" style="color:crimson;">km/h</div>
                 </div>
-                <section class="sun-time col-md-5 dark-icon">
+                <section class="sun-time col-md-8 dark-icon">
                   <div class="card dark ">
                     <img
                       src="https://images.unsplash.com/photo-1465488867967-ffb57e7f0a89?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8bW9ybmluZ3xlbnwwfHwwfHw%3D&w=1000&q=80"
@@ -103,34 +103,59 @@
               </div>
             </div>
           </div>
-        </div>
-        <div id="side-bar" class="d-flex position-relative;">
-          <h2 class="position-absolute top-50 start-50"> World Clock</h2>
-        </div>
-        <section class="full-cast d-flex justify-content-md-around my-4">
-          <div class="weather-10_days" id="forecast">
-            <div class="daily m-2 m-md-0">
-              <p>Thu</p>
-              <img src="/assets/icons/overcast.svg" class="weather-icon forecast-icon mb-2" height="45px" width="50px">
-              <p>
-                <span class="temps">64</span>°<span class="fahrenheit">F </span><br>
-                <span class="daily-low">
-                  <span class="forecast-low temps">50</span>°<span class="fahrenheit">F
-                  </span>
-                </span>
-              </p>
+          <div id="side-bar" class="el" style="--aspect-ratio: 3 / 1;">
+            <h2 class=""> World Clock</h2>
+            <select>
+              <option value="">Select a city...</option>
+              <option value="">Rome</option>
+              <option value="">San Francisco</option>
+              <option value="">Zurich</option>
+              <option value="">Tokyo</option>
+              <option value="">Oceania</option>
+            </select>
+            <div class="city">
+              <h2>Seattle</h2>
+              <div class="date">August 15, 2022</div>
+              <div class="time">12:41:00 pm</div>
             </div>
+            <div class="city">
+              <h2>Seattle</h2>
+              <div class="date">August 15, 2022</div>
+              <div class="time">12:41:00 pm</div>
+            </div>
+            <div class="city">
+              <h2>Seattle</h2>
+              <div class="date">August 15, 2022</div>
+              <div class="time">12:41:00 pm</div>
+            </div>
+
           </div>
-        </section>
+
+          <section class="full-cast d-flex justify-content-md-around my-4">
+            <div class="weather-10_days" id="forecast">
+              <div class="daily m-2 m-md-0">
+                <p>Thu</p>
+                <img src="/assets/icons/overcast.svg" class="weather-icon forecast-icon mb-2" height="45px"
+                  width="50px">
+                <p>
+                  <span class="temps">64</span>°<span class="fahrenheit">F </span><br>
+                  <span class="daily-low">
+                    <span class="forecast-low temps">50</span>°<span class="fahrenheit">F
+                    </span>
+                  </span>
+                </p>
+              </div>
+            </div>
+          </section>
+        </div>
       </div>
     </div>
-  </div>
-  <div>
-    <large><i class="fa fa-fab fa-github">
-        <a href="https://github.com/bcot-code/VanillaWeather-app" target="_blank"></a></i>
-      by <em>Barbie C.</em></large>
-  </div>
-  <script src="src/script.js"></script>
+    <div>
+      <large><i class="fa fa-fab fa-github">
+          <a href="https://github.com/bcot-code/VanillaWeather-app" target="_blank"></a></i>
+        by <em>Barbie C.</em></large>
+    </div>
+    <script src="src/script.js"></script>
 </body>
 
 </html>
