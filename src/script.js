@@ -53,6 +53,54 @@ function sunTimes(response) {
   sunrise.innerHTML = formatDate(response.data.sys.sunrise * 1000);
 }
 
+//World Clock
+setInterval(function () {
+  //Seattle
+  let maldivesElmt = document.querySelector("#maldives");
+  let maldivesDateElement = maldivesElmt.querySelector(".date");
+  let maldivesTimeElement = maldivesElmt.querySelector(".time");
+  let maldivesTime = moment().tz("Indian/Maldives");
+
+  maldivesDateElement.innerHTML = maldivesTime.format("ll");
+  maldivesTimeElement.innerHTML = maldivesTime.format(
+    "h:mm:ss [<small>]A[</small>]"
+  );
+}, 1000);
+setInterval(function () {
+  //New York
+  let nYElement = document.querySelector("#new_york");
+  let nYDateElement = nYElement.querySelector(".date");
+  let nYTimeElement = nYElement.querySelector(".time");
+  let nYTime = moment().tz("America/New_York");
+
+  nYDateElement.innerHTML = nYTime.format("ll");
+  nYTimeElement.innerHTML = nYTime.format("h:mm:ss [<small>]A[</small>]");
+}, 1000);
+setInterval(function () {
+  //Madrid
+  let madridElement = document.querySelector("#madrid");
+  let madridDateElement = madridElement.querySelector(".date");
+  let madridTimeElement = madridElement.querySelector(".time");
+  let madridTime = moment().tz("Europe/Madrid");
+
+  madridDateElement.innerHTML = madridTime.format("ll");
+  madridTimeElement.innerHTML = madridTime.format(
+    "h:mm:ss [<small>]A[</small>]"
+  );
+}, 1000);
+setInterval(function () {
+  //Sydney
+  let sydneyElement = document.querySelector("#sydney");
+  let sydneyDateElement = sydneyElement.querySelector(".date");
+  let sydneyTimeElement = sydneyElement.querySelector(".time");
+  let sydneyTime = moment().tz("Australia/Sydney");
+
+  sydneyDateElement.innerHTML = sydneyTime.format("ll");
+  sydneyTimeElement.innerHTML = sydneyTime.format(
+    "h:mm:ss [<small>]A[</small>]"
+  );
+}, 1000);
+
 //forecast 10 days
 function displayForecast(response) {
   let forecast = response.data.daily;
