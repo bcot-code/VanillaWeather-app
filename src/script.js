@@ -120,6 +120,7 @@ function updateZone(event) {
     "A"
   )}</small></div>
   </div>
+  <a href="/">Cities</a>
   `;
 }
 let citiesSelect = document.querySelector("#city-2");
