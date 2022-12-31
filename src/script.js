@@ -104,18 +104,19 @@ setInterval(function () {
 //Multiple location's clocks
 function updateZone(event) {
   let cityTimeZone = event.target.value;
+  let cityName = cityTimeZone.split("/")[1];
   let cityTime = moment().tz(cityTimeZone);
   let citiesElement = document.querySelector("#cities");
-  citiesElement.innerHTML = cityTimeZone;
-  citiesElement = `
+  citiesElement.innerHTML = `
   <div class="city">
-      <div>
-        <h3>${cityTimeZone}</h3>
-        <div class="date">${cityTime.format("ll")}</div>
-      </div>
-        <div class="time">${cityTime.format("h:mm:ss")}<small>${cityTime.format(
+    <div>
+      <h3>${cityName}</h3>
+      <div class="date">${cityTime.format("ll")}</div>
+    </div>
+    <div class="time">${cityTime.format("h:mm:ss")}<small>${cityTime.format(
     "A"
   )}</small></div>
+  </div>
   `;
 }
 let citiesSelect = document.querySelector("#city-2");
