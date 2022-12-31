@@ -55,7 +55,7 @@
                             'Times New Roman', serif;
                         float: inline-end;
                         padding-inline-end: 10px;">
-                    <span id="city" style="font-size: 40px;">San Francisco</span>
+                    <span id="city-1" style="font-size: 40px;">San Francisco</span>
                   </li>
                   <li id="date_time" style="list-style: none; font-size: 16px; color:blueviolet;"></li>
                   <br />
@@ -108,42 +108,44 @@
           </div>
 
           <div id="side-bar" class="el">
-            <h2 class=""> World Clock</h2>
-            <select>
+            <h2> World Clock</h2>
+            <select id="city-2">
               <option value="">Select a city...</option>
-              <option value="">Rome</option>
-              <option value="">San Francisco</option>
-              <option value="">Zurich</option>
-              <option value="">Tokyo</option>
-              <option value="">Queensland</option>
+              <option value="Europe/Rome">Rome</option>
+              <option value="Europe/Vatican">Vatican</option>
+              <option value="Europe/Zurich">Zurich</option>
+              <option value="Asia/Tokyo">Tokyo</option>
+              <option value="Australia/Queensland">Queensland</option>
             </select>
-            <div class="city" id="maldives">
-              <div>
-                <h3>Maldives</h3>
-                <div class="date"></div>
+            <div id="cities">
+              <div class="city" id="maldives">
+                <div>
+                  <h3>Maldives</h3>
+                  <div class="date"></div>
+                </div>
+                <div class="time"></div>
               </div>
-              <div class="time"></div>
-            </div>
-            <div class="city" id="new_york">
-              <div>
-                <h3>New York</h3>
-                <div class="date"></div>
+              <div class="city" id="new_york">
+                <div>
+                  <h3>New York</h3>
+                  <div class="date"></div>
+                </div>
+                <div class="time"></div>
               </div>
-              <div class="time"></div>
-            </div>
-            <div class="city" id="madrid">
-              <div>
-                <h3>Madrid</h3>
-                <div class="date"></div>
+              <div class="city" id="madrid">
+                <div>
+                  <h3>Madrid</h3>
+                  <div class="date"></div>
+                </div>
+                <div class="time"></div>
               </div>
-              <div class="time"></div>
-            </div>
-            <div class="city" id="sydney">
-              <div>
-                <h3>Sydney</h3>
-                <div class="date"></div>
+              <div class="city" id="sydney">
+                <div>
+                  <h3>Sydney</h3>
+                  <div class="date"></div>
+                </div>
+                <div class="time"></div>
               </div>
-              <div class="time"></div>
             </div>
           </div>
 

@@ -101,6 +101,26 @@ setInterval(function () {
   );
 }, 1000);
 
+//Multiple location's clocks
+function updateZone(event) {
+  let cityTimeZone = event.target.value;
+  let cityTime = moment().tz(cityTimeZone);
+  let citiesElement = document.querySelector("#cities");
+  citiesElement.innerHTML = cityTimeZone;
+  citiesElement = `
+  <div class="city">
+      <div>
+        <h3>${cityTimeZone}</h3>
+        <div class="date">${cityTime.format("ll")}</div>
+      </div>
+        <div class="time">${cityTime.format("h:mm:ss")}<small>${cityTime.format(
+    "A"
+  )}</small></div>
+  `;
+}
+let citiesSelect = document.querySelector("#city-2");
+citiesSelect.addEventListener("change", updateZone);
+
 //forecast 10 days
 function displayForecast(response) {
   let forecast = response.data.daily;
@@ -113,24 +133,26 @@ function displayForecast(response) {
       forecastHtml =
         forecastHtml +
         `
-      <div class="col-2">
-        <div class="forecast-time">
-          <div class="weather-forecast-date">${formatDay(forecastDay.dt)}</div>
-          <img src="http://openweathermap.org/img/wn/${
-            forecastDay.weather[0].icon
-          }@2x.png"
-          alt=""
-          width="42"
-        />
+        <div class="col-2">
+          <div class="forecast-time">
+            <div class="weather-forecast-date">${formatDay(
+              forecastDay.dt
+            )}</div>
+            <img src="http://openweathermap.org/img/wn/${
+              forecastDay.weather[0].icon
+            }@2x.png"
+            alt=""
+            width="42"
+          />
           </div>
-          
+            
           <div class="forecast-temperature">
             <span class="forecast-temperature-max">
               ${Math.round(forecastDay.temp.max)}°
             </span>
-            |
+              |
             <span class="forecast-temperature-min">
-              ${Math.round(forecastDay.temp.min)}°
+                ${Math.round(forecastDay.temp.min)}°
             </span>
           </div>
         </div>
