@@ -28,6 +28,7 @@ h1 {
 }
 
 .Weather-1 {
+  margin: 0 auto;
   border-radius: 20px;
   padding: 40px;
   max-width: 900px;
@@ -60,24 +61,7 @@ h1 {
 .btn:hover {
   background: #d50808bc;
 }
-.search {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: start;
-}
 
-input.search-bar {
-  border: none;
-  outline: none;
-  padding: 0.4em 1em;
-  border-radius: 24px;
-  background: #7c7c7ca2;
-  color: white;
-  font-family: inherit;
-  font-size: 105%;
-  width: calc(100% - 100px);
-}
 .col-auto {
   flex: 0 0 auto;
   width: auto;
@@ -108,19 +92,54 @@ input.search-bar {
   min-height: 100px;
   margin-top: 20px;
 }
+
+/* World CLock */
 .el {
+  padding: 30px;
+  margin: 60px auto;
+  max-width: 600px;
+  border-radius: 10px;
   background: rgba(36, 24, 42, 0.535);
-  aspect-ratio: var(--aspect-ratio);
+  box-shadow: 0px 6px 11px 0px rgba(132, 28, 97, 0.716);
   color: white;
-  font: 150% system-ui;
-  position: relative;
-  margin: 0 0 1rem;
 }
-#side-bar {
-  border-right: 1px solid #369;
-  margin: 0;
-  padding: 5px;
+h2 {
+  text-align: center;
+  font-family: Verdana, sans-serif;
+  font-size: 36px;
 }
+h3 {
+  margin: 0 0 5px;
+  font-size: 28px;
+}
+select {
+  display: block;
+  width: 100%;
+  font-size: 15px;
+  padding: 10px;
+  border-radius: 4px;
+}
+.city {
+  display: flex;
+  margin: 15px 0;
+  justify-content: space-between;
+  padding: 25px 0;
+  border-bottom: 1px dashed blueviolet;
+}
+.date {
+  opacity: 0.7;
+}
+.time {
+  font-size: 35px;
+  font-weight: lighter;
+}
+.time small {
+  font-size: 20px;
+  line-height: 48px;
+  vertical-align: middle;
+}
+
+/* Background SF */
 .card-img {
   height: 300px;
   object-fit: cover;
@@ -134,6 +153,11 @@ input.search-bar {
   left: 0;
   text-align: end;
 }
+
+/* Sun TIMES */
+.sun-time {
+  margin: 50px 10px 0 20px;
+}
 .sun-time i {
   font-size: 17px;
   color: #00526beb;
@@ -142,7 +166,7 @@ input.search-bar {
 #wind {
   margin: 20px;
   color: aliceblue;
-  font-size: 20px;
+  font-size: 25px;
 }
 #temperature {
   font-size: 40px;
@@ -187,4 +211,12 @@ input.search-bar {
 
 a#Cel {
   font-size: 20px;
+}
+.title-name {
+  position: relative;
+  right: -90%;
+  transform-origin: 0 0;
+  transform: rotate(269deg);
+  font-size: 20px;
+  color: white;
 }
