@@ -175,7 +175,7 @@ function specificForecast(coordinates) {
 function displayWeatherCondition(response) {
   let temperatureElement = document.querySelector("#temperature");
   let descriptionElement = document.querySelector("#description");
-  let cityElement = document.querySelector("#city");
+  let cityElement = document.querySelector("#city-1");
   let windElement = document.querySelector("#wind");
   let dateElement = document.querySelector("#date_time");
   let icon = response.data.weather[0].icon;
