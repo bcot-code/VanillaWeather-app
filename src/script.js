@@ -1,3 +1,6 @@
+require(`dotenv`).config({ path: `./.env` });
+console.log(process.env);
+
 // Time
 function formatDate(timestamp) {
   let date = new Date(timestamp);
